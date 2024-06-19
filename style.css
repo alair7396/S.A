@@ -1,0 +1,70 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.global {
+    /* Altura e largura da viewport */
+    height: 100vh;
+    width: 100vw;
+    
+    /* Centraliza o conteúdo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* Necessário para posicionamento absoluto da imagem */
+    overflow: hidden; /* Evita scrollbars se a imagem for maior que a viewport */
+}
+
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cobre toda a área sem distorcer a imagem */
+    opacity: 0.5; /* Ajuste a opacidade conforme necessário */
+    z-index: -1; /* Coloca a imagem atrás dos outros elementos */
+}
+
+.container-loguin, .container-register {
+    background-color: rgba(255, 255, 255, 0.8); /* Fundo branco semitransparente */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra leve */
+    margin: 10px;
+    z-index: 1; /* Garante que os containers fiquem acima da imagem de fundo */
+}
+
+h1 {
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    text-align: center;
+    color: #333;
+    z-index: 1; /* Garante que o título fique acima da imagem de fundo */
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #ff870fbd; /* Cor de fundo sólida para o botão */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ff870f; /* Cor de fundo sólida para o botão ao passar o mouse */
+}
